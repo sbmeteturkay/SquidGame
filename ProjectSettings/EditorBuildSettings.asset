@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Playground.unity
-    guid: 707acc8dffb72b144bb1ffbe1c965f3d
+    path: Assets/Main/Scene/GreenLight.unity
+    guid: 9b0408c9e61522d4ab90c25802d05fbd
+  - enabled: 1
+    path: Assets/Main/Scene/GlassBridge.unity
+    guid: e64d2e5ce4c88a44480066d2e2d084a6
   m_configObjects: {}

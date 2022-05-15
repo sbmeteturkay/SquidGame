@@ -36,21 +36,33 @@ public class GameComplete : MonoBehaviour
             {
                 GameOver();
                 Debug.Log("moving lose lose");
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
             }
         }
         if (countdown._currentTime<= 0){
             GameOver();
             Debug.Log("countdown lose");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (line.transform.position.z <= player.transform.position.z)
         {
             win.gameObject.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
     public void GameOver()
     {
         lose.SetActive(true);
         playAnimator.SetTrigger("death");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void NextScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     public bool IsMoving()
     {

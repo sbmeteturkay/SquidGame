@@ -16,9 +16,14 @@ public class GlassBreakable : MonoBehaviour
             if (f == 2)
             {
                 a = false;
-                i++;
+                //increase if second glass
             }
+            gameObjects[i].transform.GetChild(0).GetComponent<BreakableWindow>().enabled = a;
+            gameObjects[i+1].transform.GetChild(0).GetComponent<BreakableWindow>().enabled =! gameObjects[i].transform.GetChild(0).GetComponent<BreakableWindow>().enabled;
+
             gameObjects[i].transform.GetChild(0).GetComponent<BreakableWindow>().breakable = a;
+            gameObjects[i + 1].transform.GetChild(0).GetComponent<BreakableWindow>().breakable = !gameObjects[i].transform.GetChild(0).GetComponent<BreakableWindow>().breakable;
+            i++;
         }   
     }
 }
